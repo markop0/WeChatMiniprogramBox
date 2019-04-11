@@ -1,0 +1,40 @@
+<view>
+  <!-- 头部 -->
+  <view>
+
+    <view class='menu-box topTabSwiper'>
+      <view class='menu-btn {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>
+        <image data-current="0" src='../image/set.png'></image>
+        <view data-current="0">功能1</view>
+      </view>
+      <view class='menu-btn {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>
+        <image data-current="1" src='../image/set.png'></image>
+        <view data-current="1">功能2</view>
+      </view>
+      <view class='menu-btn {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>
+        <image data-current="2" src='../image/set.png'></image>
+        <view data-current="2">功能3</view>
+      </view>
+    </view>
+    <!-- <view class='topTabSwiper'>
+      <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>11</view>
+      <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>22</view>
+      <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>33</view>
+    </view> -->
+  </view>
+</view>
+
+
+<!--滑动区间 -->
+
+<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <swiper-item>
+    <view class='swiper_con'>111111111111111111111</view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'>22222222222222222222</view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'>33333333333333333333</view>
+  </swiper-item>
+</swiper>

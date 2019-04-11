@@ -1,0 +1,9 @@
+<!-- new Number: {{newNumber}} -->
+<view class='number'>{{number}}</view>
+<button bindtap="start">start</button>
+
+
+<!-- <view class='red'>
+  <view class='text'></view>
+</view> -->
+<button bindtap='tap' data-key='abc'>tap</button>

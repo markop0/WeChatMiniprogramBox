@@ -1,0 +1,36 @@
+/* pages/suiji/suiji.wxss */
+page{width: 100vw;
+  height: 100vh;display: flex;align-items: center;justify-content: center;}
+#gestureView {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100
+}
+
+.danren {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  background: #afafaf;
+  position: fixed;
+  text-align: center;line-height: 80px;
+  z-index: 300;
+}
+.ok{
+  width: 90px;
+  height: 90px;
+  border-radius: 100px;
+  background: #ffca69;
+  text-align: center;line-height: 90px;
+  z-index: 999;
+  font-weight: bold;
+  font-size: 23px;
+  color: #fff;
+}
+.active{
+  background: #ff7556;
+  box-shadow: 0px 0px 20px 11px #ff7556;
+}

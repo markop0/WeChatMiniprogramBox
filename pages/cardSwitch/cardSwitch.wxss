@@ -1,0 +1,456 @@
+page {
+  width: 100%;
+  font-size: 14px;
+  padding-bottom: 40px;
+  background: #f2f2f2;
+}
+
+.BTR10 {
+  border-radius: 10px 10px 0 0;
+}
+
+.BTR10 picker {
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.BBR10 {
+  border-radius: 0 0 10px 10px;
+}
+
+.ding-box {
+  height: 40px;
+  display: flex;align-items: center;
+}
+
+.dingtime {
+  width: 100px;
+  height: 30px;
+  float: left;
+  line-height: 30px;
+  font-size: 16px;
+  border-radius: 100px;
+  border: 1px #8ec5fc solid;
+  text-align: center;
+}
+
+.onDT {
+  background: #91c5fc;
+  color:#fff;
+
+}
+
+.huise {
+  color: #d3d3d3;
+}
+
+.me-bg {
+  width: 100%;
+  height: 100px;
+  /* background: red; */
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.myEWM {
+  width: 26px;
+  height: 26px;
+  padding: 6px 6px 0 6px;
+  float: right;
+}
+
+.app-num {
+  color: #fff;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.me-head {
+  position: relative;
+  top: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 99;
+  flex-direction: column;
+}
+
+.img-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.head-img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
+
+.vip-0, .vip-1 {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  top: -25px;
+  left: 30px;
+  border-radius: 200px;
+}
+
+.BeVip {
+  background-image: linear-gradient(120deg, #fff6e7 0%, #fce5c3 100%);
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #755035;
+  font-size: 16px;
+}
+
+
+
+.me-id {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top:4px; 
+}
+
+.menu-box {
+  position: relative;
+  top: -15px;
+  width: 95%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #b9b0b0;
+  margin: 0 auto;
+}
+
+.menu-btn {
+  width: 33.33%;
+  text-align: center;
+  color: #10aeff;
+  padding: 10px 0;
+}
+
+.tab image, .menu-btn image {
+  width: 40px;
+  height: 40px;
+}
+
+.set-box {
+  padding: 0 2.5% 0 2.5%;
+}
+
+.set-row {
+  height: 40px;
+  background: white;
+  border-bottom: 1px #f0f0f0 solid;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.timeset {
+  width: 60px;
+  height: 20px;
+  /* background: red; */
+  text-align: center;
+  float: left;
+  /* margin: 8px 0 0; */
+  font-size: 16px;
+}
+
+.timeset-t {
+  width: 60px;
+  height: 20px;
+  /* background: red; */
+  text-align: center;
+  float: left;
+  /* padding: 9px 0; */
+  font-size: 16px;
+
+}
+
+.t-text {
+  float: left;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.becomeVip {
+  width: 90%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 10px;
+  left: 0px;
+  right: 0px;
+}
+
+/* 情境模式 */
+
+.tag-title {
+  width: 100%;
+  height: 20px;
+  color: rgb(56, 56, 56);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.single-box {
+  padding: 0 2.5% 0 2.5%;
+  margin-top: 2.5vw;
+}
+
+.tag-box {
+  width: 100%;
+  max-height: 240px;
+  /* height: 300px; *//* background: #7fb9f2; */
+  background: #abd4ff;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding:0  0 2.5%;
+}
+
+.single-tag {
+  position: relative;
+  display: flex;
+  height: 35px;
+  margin: 5px 2.5%;
+  padding: 0 0 0 15px;
+  background: floralwhite;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 33px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.del-tag-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  line-height: 35px;
+  margin-right: 4px;
+}
+
+.del-tag-btn:active {
+  background-color: #fcc7ca;
+}
+
+.add-tag-box {
+  display: flex;
+  height: 30px;
+  /* background: rgb(146, 105, 23); */
+  margin: 8px 2.5% ;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-tag {
+  width: 30px;
+  height: 30px;
+  background: #03daf7;
+  color: white;
+  margin: 2.5%;
+  font-size: 28px;
+  line-height: 27px;
+  border-radius: 100px;
+  text-align: center;
+  border: 1px white solid;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+/* .add-tag:active{
+  background-color: red;
+} */
+
+.addtag-input {
+  /* display: none; */
+  width: 42.5%;
+  height: 35px;
+  background: floralwhite;
+  margin: 5px 2.5% 0;
+  font-size: 16px;
+  line-height: 33px;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: #00000080;
+  z-index: 800;
+  position: fixed;
+  top: 0;
+}
+
+.myteam {
+}
+
+.teamlist {
+  background: white;
+  width: 100%;
+  max-height: 190px;
+  /* display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center; */
+  border-radius: 10px;
+  padding: 2.5% 0;
+}
+
+.team {
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0 10px;
+}
+
+.add-team-box {
+  width: 100%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-team {
+  width: 30px;
+  height: 30px;
+  background: #03daf7;
+  color: white;
+  margin: 2.5%;
+  font-size: 28px;
+  line-height: 28px;
+  border-radius: 100px;
+  text-align: center;
+  border: 1px white solid;
+}
+
+.showEWM {
+  background: white;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+
+}
+
+.myEWMtext, .myEWMtip {
+  width: 100%;
+  height: 38px;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0 40px;
+}
+
+.MyEWMbox {
+  width: 100%;
+  text-align: center;
+}
+
+.MyEWMbox image {
+  width: 200px;
+  height: 200px;
+}
+
+.teamnameinput {
+  background: #03daf7;
+  border-radius: 100px;
+  width: 60%;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center
+}
+.teamnameinput input{
+  line-height: 40px;
+  width: 100%;
+}
+.Sicon {
+  width: 34px;
+  height: 34px;
+  margin-left: 1.6%;
+}
+.Back{
+  width: 26px;
+  height: 26px;
+  position: fixed;
+  top: 3px;
+  right: 10px;
+  z-index: 99999;
+}
+.functionBox{
+  display: flex;
+  justify-content: center;
+}
+.SC-box{
+  width: 60px;
+}
+.saoma{
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+  background: #12b7f5;
+  border-radius: 4px;
+  /* position: fixed;
+  top: 10px;
+  left: 10px; */
+}
+/* ......................... */
+
+.tab {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.topTabSwiper {
+  zoom: 1;
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer {
+  color: #f00;
+}
+
+.swiper {
+  width: 100%;
+  height: 80%;
+}
+
+.swiper_con {
+  width: 100%;
+  height: 100%;
+}
+.miniQipao>.dingtime {
+  width:80px;
+}

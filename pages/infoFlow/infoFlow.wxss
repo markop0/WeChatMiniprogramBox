@@ -1,0 +1,170 @@
+/* 顶部swiper部分 */
+
+.infoFlowList {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 10rpx;
+  width: 100%;
+}
+
+swiper-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translate(0%, 0px) translateZ(0px);
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+}
+.infoFlowList .item {
+background:#fff;
+border-radius:4rpx;
+width:100%;
+display:inline-block;
+padding:30rpx 20rpx;
+box-sizing:border-box;
+height: 220rpx;
+}
+.infoFlowList .content {
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+height:120rpx;
+color:#666;
+
+}
+.infoFlowList .content .text {
+  width: 80%;
+flex:1;
+white-space:normal;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:3;
+overflow:hidden;
+
+}
+.infoFlowList.content .img {
+width:100rpx;
+height:100rpx;
+margin-left:20rpx;
+
+}
+.infoFlowList .content image {
+width:100rpx;
+height:100rpx;
+border-radius:4rpx;
+
+}
+/* 信息流部分 */
+.item0{
+  background:#fff;
+margin-bottom:20rpx;
+
+}
+.user{
+  display:flex;
+padding:20rpx 30rpx;
+}
+.user .avatar {
+  width:100rpx;
+height:100rpx;
+border-radius:50%;
+
+}
+.user .others {
+flex:1;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-left:20rpx;
+box-sizing:border-box;
+
+}
+.user .others .l {
+flex:1;
+height:100rpx;
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+
+}
+.user .others .jobtitle {
+font-size:24rpx;
+color:#999;
+
+}
+.content.intro {
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:4;
+overflow:hidden;
+
+}
+.more {
+width:24rpx;
+height:24rpx;
+
+}
+.content.intro {
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:4;
+overflow:hidden;
+
+}
+.content {
+display:block;
+margin:20rpx 30rpx;
+color:#666;
+word-break:break-all;
+
+}
+.pictures {
+padding:0 30rpx 30rpx;
+box-sizing:border-box;
+display:flex;
+justify-content:flex-start;
+flex-wrap:wrap;
+
+}
+.picture image {
+width:100%;
+border:1px solid #efefef;
+display:block;
+
+}
+.footer {
+display:flex;
+justify-content:space-around;
+align-items:center;
+border-top:1rpx solid #efefef;
+height:80rpx;
+color:#999;
+font-size:28rpx;
+
+}
+.footer .i {
+display:flex;
+align-items:center;
+
+}
+.footer image {
+width:36rpx;
+height:36rpx;
+margin-right:12rpx;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

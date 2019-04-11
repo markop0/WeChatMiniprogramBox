@@ -1,0 +1,11 @@
+  <view class='index-swiper'>
+    <!-- <image src="../../images/activity/notice_icon_default@2x.png" class='index-swiper-icon'></image> -->
+    <swiper autoplay="true"  circular="true" class='index-swiper-content'>
+      <block wx:for="{{notice}}" wx:key="index">
+        <swiper-item class="index-swiper-content-term">
+          <text>{{item.notice}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  

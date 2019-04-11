@@ -1,0 +1,21 @@
+<view class='idx-content'>
+    <view class='idx-swiper'>
+        <view   class='idx-cswp {{item.swpClass}}' 
+                wx:for="{{swiperList}}" wx:key=""
+                bindtap="swpBtn"
+                data-index="{{index}}">
+            <image src='{{item.imgsrc}}' mode='widthFix'></image>
+            <!-- <view class='swp-title' hidden="{{item.swpClass!=='swp-center'}}">
+                <view class='swp-btime'>{{item.time}}</view>
+                <view class='swp-bname'>{{item.bname}}</view>
+            </view> -->
+        </view>
+    </view>
+</view>
+<swiper indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"circular="true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>

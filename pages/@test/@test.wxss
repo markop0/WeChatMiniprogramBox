@@ -1,0 +1,99 @@
+/* .ppa{
+  position: fixed;top:100px;left: 10px;
+  height:200px;width:200px;
+  border-radius: 50%;
+} */
+.switch-type {
+  display: flex;
+}
+.switch-type .btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.switch-type .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.switch-type .btn {
+  background: #dfdfdf;
+  padding: 10rpx 40rpx;
+}
+.switch-type .btn.active {
+  border: 2rpx solid #007bff;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/*  */
+.me-bg {
+  width: 100%;
+  height: 100px;
+  /* background: red; */
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+/* .app-num{
+  float: right;
+  color:#fff;
+  font-size:14px;
+  margin-right: 4px;
+} */
+.me-head {
+  position: relative;
+  top: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.head-img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
+.id-box {
+  width: 100%;
+  position: relative;
+  top: -40px;
+  text-align: center;
+}
+
+.me-id {
+  width: 70px;
+  background: #bccddc;
+  font-size: 16px;
+  font-weight: bold;
+  top: 5px;
+}
+.xlbox{
+  width: 100%;
+  height: 900px;
+  background: #f3f3f3;
+}
+.tieding{
+ position: fixed;
+ top: 42px;
+}
+.xiao{
+  height: 60px;
+  position: fixed;
+ top: 0;
+}
+.moren{
+  position: static;
+}
+/*  */
+.fix-news{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 99999;
+}

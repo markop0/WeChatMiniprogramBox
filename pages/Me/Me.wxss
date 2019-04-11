@@ -1,0 +1,38 @@
+/* pages/Me/Me.wxss */
+.card{
+  background: #fff;
+  margin: 20rpx 0 0;
+  padding: 0 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+}
+.infobox{
+  height: 180rpx;
+}
+.info{
+  display: flex;
+  width: 80%;
+  align-items: center;
+}
+.card .more image {
+width:20rpx;
+height:40rpx;
+}
+.avatar{
+  width: 60px;
+  height: 60px;
+}
+.text{
+  margin-left: 20rpx;
+}
+.name{
+  font-size: 40rpx;
+  color: #333;
+}
+.Signature{
+  color:#abb4bf;
+
+}

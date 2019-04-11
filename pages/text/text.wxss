@@ -1,0 +1,23 @@
+/* pages/text/text.wxss */
+
+.number {
+  font-size: 20px;
+}
+
+.text {
+  -webkit-clip-path: polygon(0% 0%, 0 12%, 64% 12%, 44% 73%, 0 73%, 0 100%, 100% 100%, 100% 0%);
+  clip-path:polygon(0% 0%, 0 12%, 64% 12%, 44% 73%, 0 73%, 0 100%, 100% 100%, 100% 0%);
+  background: #e7d7ac;
+  width: 100%;
+  height: 300px;
+  z-index: 99;
+  position: relative;
+}
+
+.red {
+  width: 100%;
+  height: 300px;
+  background: #ffc7c8;
+  z-index: 10;
+  position: absolute;
+}

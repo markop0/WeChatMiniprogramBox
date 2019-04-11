@@ -1,0 +1,108 @@
+<view class='wrapper'>
+  <view class='card infobox'>
+    <view class='info'>
+      <image class='avatar' src='/img/empty_avatar_user.png'></image>
+      <view class='text'>
+        <view class='name'>{{userInfo.username || '登入/注册'}}</view>
+        <view class='Signature'>{{userInfo.Signature || '个性签名'}}</view>
+      </view>
+    </view>
+    <view class='more'>
+      <image src='/img/profile_arrow.png'></image>
+    </view>
+  </view>
+  <view class='card'>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/ic_notification.png'></image>
+        <view>消息中心</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/ic_heart_entry_bottom_full.png'></image>
+        <view>我喜欢的</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/ic_collection_set.png'></image>
+        <view>收藏集</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/user_buy.png'></image>
+        <view>购物</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/user_liked_pin.png'></image>
+        <view>我的点赞</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/view.png'></image>
+        <view>我的阅读</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/tag.png'></image>
+        <view>标签管理</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='card'>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/icon_feed_back.png'></image>
+        <view>用户反馈</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/settings.png'></image>
+        <view>设置</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>
+        <image src='/img/qrcode.png'></image>
+        <view>小程序码</view>
+      </view>
+      <view class='more'>
+        <image src='/img/profile_arrow.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

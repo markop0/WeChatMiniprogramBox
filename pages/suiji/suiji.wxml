@@ -1,0 +1,5 @@
+<view id="gestureView" bindtouchstart="touchstartFn" bindtouchmove="touchmoveFn" bindtouchend="touchendFn">
+  <view class="danren {{index==nowNum?'active':''}}" style='top:{{item.clientX}}px;left:{{item.clientY}}px' wx:for='{{humanArr}}' wx:key='{{index}}'>{{index}}</view>
+  
+</view>
+<view class='ok' catchtap='start'>start</view>

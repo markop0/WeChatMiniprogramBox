@@ -1,0 +1,60 @@
+
+<!-- <view class="ppa" animation="{{animationData}}" style="background:#04b3e4;"></view> -->
+<!-- <image class="ppa" animation="{{animationData}}" src='../image/p1.png'></image>
+<button bindtap='kai'>开</button>
+<button bindtap='shou'>收</button> -->
+
+
+<view class="container">
+  <canvas canvas-id='share' bindlongtap='drawImage' style='width:100vw;height:90vh;'></canvas>
+  <view class='tips' bindtap='saveImageToPhotosAlbum'>点击保存图片</view>
+</view>
+<button class='sub-mytest' bindtap='subMytest'>提交今日自评分数</button>
+<view>
+  <!-- <web-view src="http://admin.threesthings.com/"></web-view> -->
+</view>
+<!-- <view class="switch-type">
+    <view class="btn {{currentSelectTripType == 'pinche' ? 'active' : ''}}" bindtap='selectedPinche' data-id='pinche'>AA</view>
+    <view class="btn {{currentSelectTripType == 'baoche' ? 'active' : ''}}" bindtap='selectedPinche' data-id='baoche'>BB</view>
+</view> -->
+
+<!-- <view>
+    <view class="me-bg {{upx==1 ? 'xiao' : ''}}">
+    </view>
+    <view class='me-head'>
+      <view class="img-box {{upx==1 ? 'tieding' : 'moren'}}" animation="{{meimg}}">
+        
+      </view>
+    </view>
+    <view class='id-box'>
+      <text class="me-id " animatain="{{meid}}">aaaa</text>
+    </view>
+    
+</view> -->
+
+<!-- <view class='xlbox'>
+<textarea rows='4' placeholder='请输入内容' style='border: 1px solid #d4d1ca;'></textarea>
+<view class="tui-picker-content">
+ <view class="tui-picker-name">日期时间选择器（精确到分）</view>
+ <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+ <view class="tui-picker-detail">
+  选择日期时间: {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+ </view>
+ </picker>
+</view>
+<button class="animation-button animation-button-reset" bindtap="reset">reset</button>
+</view> -->
+
+<view>
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <swiper-item>
+    <view class='swiper_con'><image src='../image/kcsw.jpg'></image></view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'><image src='../image/kcsw.jpg'></image></view>
+  </swiper-item>
+  <swiper-item>
+    <view class='swiper_con'><image src='../image/kcsw.jpg'></image></view>
+  </swiper-item>
+</swiper>
+</view>

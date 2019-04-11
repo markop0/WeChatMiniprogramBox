@@ -1,0 +1,38 @@
+/**index.wxss**/
+
+page {
+  margin: 60px 0;
+  
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.Mbox {
+  background-image: url(http://u6.gg/gPe9D);
+}
+
+.Mbox button {
+  width: 44.5%;
+  height: 40px;
+  float: left;
+  margin: 10px;
+}

@@ -1,0 +1,53 @@
+<!--pages/playbox.wxml-->
+
+<view class="playbox">
+			<view class="r-title">{{audioName}}</view>
+			<view class="/imgbox"><image class='{{nowclass}}' src='{{audio/img}}'></image></view>
+			<view class="play-box">
+		      <view class="left">
+		        <view class="info">
+		          <view class="size">{{currentTime}}</view>
+              <slider block-size="16"value="{{timeVal}}"max="{{maxVal}}" activeColor="#FF1744" block-color="#f97468"bindchange="slideBar"bindchanging="slideBar"></slider>
+		          <view class="timeshow">{{duration}}</view>
+		        </view>
+		      </view>
+		    </view>
+        <!-- <view class="progresswrap">
+          <slider style="width:500rpx;margin-left:125rpx;" block-size="16"value="{{timeVal}}"max="{{maxVal}}" activeColor="#FF1744" block-color="#f97468"show-value="true"bindchange="slideBar"></slider>
+        </view> -->
+		    <!-- <view class="video">
+          <audio poster="{{audio/img}}" name="{{audioName}}" author="{{author}}" src="{{src}}" id="myAudio" controls ></audio>
+		      
+		    </view> -->
+		
+			<view class="ctrlbox">
+				<view class="listBtn" bindtap='onList'><image src=' /img/list.png' bindtap='listOn'></image></view>
+				<view class="beforeBtn" bindtap='PreSong'><image src=' /img/before.png'></image></view>
+				<view class="playBtn" bindtap='{{playAction}}'><image style='width:48px;height:48px;' src='{{playIcon}}'></image></view>
+				<view class="nextBtn" bindtap='NextSong'><image src=' /img/next.png'></image></view>
+				<view class="loopBtn"><image src=' /img/loop.png'></image></view>
+			</view>
+		</view>
+
+
+<!--详情介绍-->
+		<!-- <view class="infobox">
+			<view class="detail">
+				<view class="infor-head">简介</view>
+				<text class="infor-text">文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介文字简介</text>
+			</view>
+		</view> -->
+		<!--播放列表抽屉-->
+		<view class="play-list" animation="{{animationData}}" wx:if='{{playlist}}'>
+			<view class='list-box'>
+        <!-- <text>音频001</text> -->
+        <view class="Song item {{PlayDataI==index ? 'playing':''}}" wx:for="{{songslist}}" wx:key='{{index}}' id="list{{index}}"
+                data-index="{{index}}"  bindtap="playthis">
+            <view class="name">{{item.name}}</view>
+            <!-- <view class="play_list__line">-</view>
+            <view class="singer">{{item.singer}}</view> -->
+            <image class="playing-gif" wx:if="{{PlayDataI==index}}" src=" /img/playing.gif"/>
+        </view>
+			</view>
+		</view>
+		<view class="mask" wx:if='{{mask}}' bindtap='offList'></view>

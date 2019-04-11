@@ -1,0 +1,54 @@
+/* pages/faweibo/faweibo.wxss */
+.DTbox{
+  background: white;
+  /* width: 100%; */
+  height: 200px;
+  padding:20rpx;
+}
+.DTbox textarea{
+  width: 100%;
+  height: 200px;
+  
+
+}
+.moreImg{
+  width: 60rpx;
+  height: 60rpx;
+}
+.question-images{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 4vw;
+}
+.q-image-wrap{
+  width: 20vw;
+  height: 20vw;
+  margin: 0 4vw 4vw 0;
+}
+
+.q-image{
+  width: 20vw;
+  height: 20vw;
+}
+.xx{
+  width: 26px;
+  height: 26px;
+  position: relative;
+  bottom:98px;
+  right:-70px;
+
+}
+.ctrlbox{
+  display: flex;
+  justify-content: space-around;
+}
+.btnn{
+  height: 50px;
+  width: 100%;
+  background: #fcdd6d;
+  text-align:center;
+  line-height: 50px;
+}
+.More{
+  margin-top: 20px;
+}

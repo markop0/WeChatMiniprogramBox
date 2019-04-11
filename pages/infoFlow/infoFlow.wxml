@@ -1,0 +1,80 @@
+<view class='container'>
+  <view class='infoFlowList'>
+    <swiper autoplay='{{false}}' circular='{{false}}' duration="500" wx:if='{{recommendList.length}}' next-margin='100rpx' style='height:{{swiperHeight}}'circular="true">
+      <block wx:for="{{recommendList}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class="item">
+            <view class="title">
+              <image class="icon" src="/img/ic_topic_star.png"></image>
+              <text>{{item.name}}</text>
+            </view>
+            <view class="content">
+              <view class="text">{{item.text}}</view>
+              <view class="img">
+                <image mode="aspectFill" src="{{item.imgurl}}"></image>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--  -->
+  <view class='pinList'>
+    <view class="item0" hover-class="hover-class" wx:for="{{pinList}}" wx:key="{{index}}">
+      <view class='user'>
+        <image class='avatar' mode='aspectFill' src='{{item.imgurl || "/img/default_avatar.png"}}'></image>
+        <view class='others'>
+          <view class='l'>
+            <view>{{item.username}}</view>
+            <view class='jobtitle'>
+              <text>{{item.text}}</text>
+              <text> · </text>
+              <text>{{filters.timeBefore(item.createdAt)}}</text>
+            </view>
+          </view>
+          <view class='r'>
+            <image class='more' src='/img/ic_pin_more.png'></image>
+          </view>
+        </view>
+      </view>
+      <text decode class='content {{intro ? "intro" : ""}}' catchtap='toFeidianDetail'>{{item.content}}</text>
+      <view class='pictures' wx:if='{{item.pictures && item.pictures.length}}'>
+        <!-- 大于等于两张图片 -->
+        <view class='picture' style='width:33.33%;' wx:key='{{index}}' wx:for='{{item.pictures}}' wx:for-item='i' wx:if='{{item.pictures.length >= 2}}'>
+          <image wx:key='{{index}}' style='height:228rpx;' mode='aspectFill' src='{{i}}'></image>
+        </view>
+        <!-- 一张图片 -->
+        <view class='picture' style='width:80%' wx:if='{{item.pictures.length === 1}}'>
+          <image mode='widthFix' src='{{item.pictures[0]}}'></image>
+        </view>
+      </view>
+      <view class='footer'>
+        <view class='i'>
+          <image wx:if='{{item.isLiked}}' src='/img/zan_green_feidian3.png'></image>
+          <image wx:if='{{!item.isLiked}}' src='/img/zan_grey_feidian3.png'></image>
+          <text>{{item.likedCount || '赞'}}</text>
+        </view>
+        <view class='i'>
+          <image src='/img/fd_reply.png'></image>
+          <text>{{item.commentCount || '评论'}}</text>
+        </view>
+        <view class='i'>
+          <image src='/img/fd_share.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class='item' hover-class='hover-class'>
+  <view class='user'>
+    <image></image>
+    <view class='others' hover-class='hover-class'>
+      <view class='1'>
+        <view class='1'>{{}}</view>
+      </view>
+    </view>
+  </view>
+</view> -->

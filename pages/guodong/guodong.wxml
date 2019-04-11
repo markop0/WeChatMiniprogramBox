@@ -1,0 +1,25 @@
+<!--pages/guodong/guodong.wxml-->
+<view class="container">
+	<view class="blobs">
+		<view class="circle-styles main-circle" bindtap='{{dian}}'>
+			<view class="bg  {{xx==0 ? '' : 'show'}}"></view>
+			<view class="cross center  {{xx==0 ? '' : 'show'}}">
+				<span></span>
+				<span></span>
+			</view>
+		</view>
+		<view class="circles circle-styles last center {{xx==0 ? '' : 'show'}}">
+		</view>
+		<view class="circles circle-styles second center {{xx==0 ? '' : 'show'}}">
+		</view>
+		<view class="circles circle-styles first center {{xx==0 ? '' : 'show'}}">
+		</view>
+		<view class="circles circle-styles kkk center {{xx==0 ? '' : 'show'}}">
+		</view>
+    <view class="circles circle-styles five center {{xx==0 ? '' : 'show'}}">
+		</view>
+		<view class="circles circle-styles six center {{xx==0 ? '' : 'show'}}">
+		</view>
+	</view>
+</view>
+

@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/animation/animation",
+    "pages/login/login",
+    "pages/Me/Me",
+    "pages/leftMenu/leftMenu",
+    "pages/article/article",
+    "pages/playbox/playbox",
+    "pages/guodong/guodong",
+    "pages/banner/banner",
+    "pages/infoFlow/infoFlow",
+    "pages/faweibo/faweibo",
+    "pages/xifu/xifu",
+    "pages/zidan/zidan",
+    "pages/text/text",
+    "pages/huakuai/huakuai",
+    "pages/cardSwitch/cardSwitch",
+    "pages/xxx/xxx",
+    "pages/suiji/suiji",
+    "pages/lucky/lucky"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#abb4bf",
+    "selectedColor": "#3281ff",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/tab_home_normal.png",
+        "selectedIconPath": "img/tab_home.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/tab_home_normal.png",
+        "selectedIconPath": "img/tab_home.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/tab_home_normal.png",
+        "selectedIconPath": "img/tab_home.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/tab_home_normal.png",
+        "selectedIconPath": "img/tab_home.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/tab_home_normal.png",
+        "selectedIconPath": "img/tab_home.png"
+      }
+    ]
+  }
+}

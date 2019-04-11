@@ -1,0 +1,107 @@
+<scroll-view class='main' scroll-y>
+  <image class='frontcover' mode="aspectFill" src='{{goodInfo.banner}}'></image>
+  <view class='good_title'>{{goodInfo.title}}</view>
+  <view class='special' wx:if="{{specialOfferStatus}}">限时特价： {{specialOfferStatus}}</view>
+  <view class='share_content'>
+    <view class='good_price'>
+      <text class='new_price font_din'>￥{{goodInfo.price}}</text>
+      <text class='now_price font_din'>￥{{goodInfo.oldPrice}}</text>
+    </view>
+    <view class='good_price font_din' wx:if="{{styleNum == 1 && !specialOfferStatus}}">￥ {{goodInfo.type[0].price}}</view>
+
+    <view class='good_price font_din' wx:if="{{styleNum != 1 && !selectStylePrice}}">￥ {{goodInfo.price[0]}}
+      <text wx:if="{{goodInfo.price[1]}}" class='font_din'> - {{goodInfo.price[1]}}</text>
+    </view>
+     <view class='good_price font_din' wx:if="{{styleNum != 1 && selectStylePrice && !specialOfferStatus}}">￥ {{selectStylePrice}}</view> 
+    <view class='good_price font_din' wx:if="{{styleNum != 1 && selectStylePrice && specialOfferStatus}}">
+      <text class='new_price font_din'>￥{{specialOfferPrice}}</text>
+      <text class='now_price font_din'>￥{{selectStylePrice}}</text>
+    </view>
+
+    <image class='share' src='/img/share.png' bindtap='share'></image>
+    <button class='share_btn' open-type="share">转发</button>
+  </view>
+  <view class='user_introduce clearBoth' wx:if="{{goodInfo.seller.announcement}}">
+    <image class='float_left' src='{{goodInfo.seller.avatar}}'></image>
+    <text class='float_left'>{{goodInfo.seller.announcement}}</text>
+  </view>
+  <view class='style' bindtap='selectShow' wx:if="{{styleNum > 1}}">
+    <view class='label'>请选择</view>
+    <text>{{selectStyleName ? selectStyleName : '请选择你要的款式' }}</text>
+    <image class='more' src='/img/gt.png'></image>
+  </view>
+  <view class='presell' wx:if="{{presellTime}}">
+    <view class='label'>预售</view>
+    <text>预计发货时间为 {{presellTime}}</text>
+  </view>
+  <view class='presell' wx:if="{{selectStylePostage}}">
+    <view class='label'>运费</view>
+    <text>{{selectStylePostage}} 元</text>
+  </view>
+  <view class='desc'>
+    <text class='title'>商品简介</text>
+    <text class='text_details'>{{goodInfo.desc}}</text>
+  </view>
+  <view class='content' wx:if="{{content}}">
+    <text class='title'>狠人说</text>
+    <text class='text_details'>{{content}}</text>
+  </view>
+  <view class='images clearBoth'>
+    <image wx:key="key" bindtap='previewImage'  mode="aspectFill" lazy-load wx:for="{{goodInfo.resImages}}" src='{{item}}' ></image>
+  </view>
+  <view class="btns clearBoth {{isIphoneX?'iphoneX_btns':''}}">
+    <view class='add_chart float_left' bindtap='navigateToChart'>
+      <image src='/img/chartInfo.png'></image>
+      <text>购物车</text>
+      <view class='chart_num' wx:if="{{chartNum != 0}}">{{chartNum}}</view>
+    </view>
+    <view class='add_like float_left' bindtap='addLike'>
+      <image src='/img/like.png' wx:if="{{!goodInfo.is_favorited}}"></image>
+      <image src='/img/likeSelected.png' wx:else></image>
+      <text>收藏</text>
+    </view>
+    <view class='chart_btn float_left' bindtap="{{styleNum > 1 ? 'selectShow':'addChart'}}" data-type="1">加入购物车</view>
+    <view class='buy_btn float_left' data-stock="{{goodInfo.type[0].stock}}" bindtap="{{styleNum > 1&&!selectStyleId ? 'selectShow':'navigateToCreateOrder'}}" data-type="2">立即购买</view>
+    <button wx:if="{{authorizationStatus}}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" class='getUserInfo'>授权</button>
+  </view>
+  <view class="select {{selectStatus ? 'show':''}}" catchtap='selectHide' catchtouchmove='true' data-status="true">
+    <view class="select_content {{selectStatus ? 'show':''}} {{isIphoneX ? 'iphoneX_select_content':''}}" catchtouchmove='true'>
+      <image class='cover' src='{{goodInfo.banner[0]}}@640w_1l'></image>
+      <view class='title'>{{goodInfo.title}}</view>
+      <view class='price' wx:if="{{styleNum == 1 && specialOfferStatus}}">
+        <text class='new_price font_din'>￥{{specialOfferPrice}}</text>
+        <text class='now_price font_din'>￥{{goodInfo.type[0].price}}</text>
+      </view>
+      <view class='price font_din' wx:if="{{styleNum == 1 && !specialOfferStatus}}">￥ {{goodInfo.type[0].price}}</view>
+
+      <view class='price font_din' wx:if="{{styleNum != 1 && !selectStylePrice}}">￥ {{goodInfo.price[0]}}
+        <text wx:if="{{goodInfo.price[1]}}" class='font_din'> - {{goodInfo.price[1]}}</text>
+      </view> 
+      <view class='price font_din' wx:if="{{styleNum != 1 && selectStylePrice && !specialOfferStatus}}">￥ {{selectStylePrice}}</view> 
+      <view class='price font_din' wx:if="{{styleNum != 1 && selectStylePrice && specialOfferStatus}}">
+        <text class='new_price font_din'>￥{{specialOfferPrice}}</text>
+        <text class='now_price font_din'>￥{{selectStylePrice}}</text>
+      </view>
+      <scroll-view class='styles_content' scroll-y="{{selectScrollStatus}}">
+        <view id='styles_select'>
+          <view class='styles_select clearBoth'>
+            <view class='label'>款式</view>
+            <text bindtap='selectedStyle' wx:key="key" wx:for="{{goodInfo.type}}" data-postage="{{item.postage}}" data-typeId="{{item.id}}" data-price="{{item.price}}" data-stock="{{item.stock}}" data-name="{{item.name}}" data-presellTime="{{item.estimated_delivery_date}}" data-specialofferstart="{{item.special_offer_start}}" data-specialofferend="{{item.special_offer_end}}" data-specialofferprice="{{item.special_offer_price}}" class="{{item.id == selectStyleId ? 'active': ''}} {{item.stock <= 0 ? 'no_stock' : ''}}">{{item.name}}</text>   
+          </view>
+          <view class='good_num clearBoth'>
+            <view class='label'>数量</view>
+            <image src='/img/sub.png' class='sub float_left' bindtap="{{selectStyleId ? 'subGoodNum':'noSelect'}}">-</image>
+            <text class='num float_left'>{{selectStyleCount}}</text>
+            <image src='/img/add.png' class='add float_left' bindtap="{{selectStyleId ? 'addGoodNum':'noSelect'}}">+</image>
+          </view>
+        </view>
+      </scroll-view>
+        <view class='chart_btn' wx:if="{{selectType==0}}" bindtap="{{selectStyleId ? 'addChart':'noSelect'}}">加入购物车</view> 
+        <view class='buy_btn' wx:if="{{selectType==0}}" bindtap="{{selectStyleId ? 'navigateToCreateOrder':'noSelect'}}">立即购买           </view>
+      <view class='next_btn' wx:if="{{selectType==1}}" bindtap="{{selectStyleId?'addChart':'noSelect'}}">确认</view>
+      <view class='next_btn' wx:if="{{selectType==2}}" bindtap="{{selectStyleId?'navigateToCreateOrder':'noSelect'}}">确认</view>
+      <button wx:if="{{authorizationStatus}}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" class='getUserInfo'>授权</button>
+    </view>
+  </view>
+  <image src='/img/returnIndex.png' class="return_index {{isIphoneX ? 'iphoneX_return_index':''}}" bindtap="returnIndex"></image>
+</scroll-view>

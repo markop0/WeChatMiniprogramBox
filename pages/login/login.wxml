@@ -1,0 +1,15 @@
+<view class='wrapper'>
+  <view class='top'>
+    <view class='logo'>
+      <image src='/img/logo.png'></image>
+    </view>
+    <view class='form' bindsubmit='commit'>
+      <view>
+        <input name='phoneNumber' placeholder='手机号/邮箱' focus></input>
+        <input name='password' placeholder='密码' password='true' value='{{password}}'></input>
+      </view>
+      <button class='login' formtype='submit'>登入</button>
+    </view>
+  </view>
+  <view class='footer'>星·star.com</view>
+</view>

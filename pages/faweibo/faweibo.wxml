@@ -1,0 +1,21 @@
+<view class='DTbox'>
+  <textarea class='' placeholder='分享新鲜事...'></textarea>
+</view>
+<view class="question-images">
+  <block wx:for="{{images}}" wx:key="*this">
+    <view class="q-image-wrap">
+      <!-- 图片缩略图  -->
+      <image  class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+      <!-- 移除图片的按钮  -->
+      <image class='xx' src='/../img/x.png' data-idx="{{index}}" bindtap="removeImage"></image>
+      <!-- <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">删除</view> -->
+    </view>
+  </block>
+</view>
+<view class='More'>
+  <image class='moreImg' bindtap="chooseImage" src='/../img/pic.png'></image>
+</view>
+<view class='ctrlbox'>
+  <view class='btnn'>取消</view>
+  <view class='btnn'>发布</view>
+</view>

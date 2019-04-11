@@ -1,0 +1,10 @@
+
+<view class='bbb'>ewqewqwqe</view>
+<!-- <view class='ccc'>吸顶效果</view> -->
+<view class="ccc {{menuFixed ? 'fixed': ''}}" id="affix">11111111111111</view>
+<view class='aaa'>ewqewqwqe</view>
+<!-- <view class="ccc {{menuFixed1 ? 'fixed': ''}}" id="affix">2222222222222</view> -->
+<view class='aaa'>ewqewqwqe</view>
+<!-- <view class="ccc {{menuFixed2 ? 'fixed': ''}}" id="affix">3333333333</view> -->
+<view class='aaa'>ewqewqwqe</view>
+<view class='xxx'>ewqewqwqe</view>
