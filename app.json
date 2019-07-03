@@ -18,7 +18,11 @@
     "pages/cardSwitch/cardSwitch",
     "pages/xxx/xxx",
     "pages/suiji/suiji",
-    "pages/lucky/lucky"
+    "pages/lucky/lucky",
+    "pages/subject/subject",
+    "pages/calendar/calendar",
+    "pages/recorder/recorder",
+    "pages/sort/sort"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -64,5 +68,6 @@
         "selectedIconPath": "img/tab_home.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

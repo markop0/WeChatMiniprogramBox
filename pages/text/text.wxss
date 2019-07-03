@@ -21,3 +21,44 @@
   z-index: 10;
   position: absolute;
 }
+
+.Mbox{
+  background: #fff;
+  width: 82vw;
+  height: 200px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+}
+.title{
+  width: 60px;
+  height: 100%;
+  background: #fffae8;
+}
+.area{
+  width: calc(100% - 60px);
+  height: 100%;
+  background: #f3f3f3;
+}
+
+
+.container {
+    background: #eee;
+    width: 100vw;
+    height: 2000px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+}
+
+.cell {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 30px;
+    background: #ff7300;
+    top: 0px;
+}

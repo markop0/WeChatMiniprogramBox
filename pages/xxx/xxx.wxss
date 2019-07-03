@@ -1,4 +1,5 @@
 /* pages/xxx/xxx.wxss */
+page{width: 100vw;height: 100vh;background: #90c7ff;}
 
 .navbar {
   position: relative;
@@ -44,3 +45,14 @@
 }
 
 
+.bbg{position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;}
+.nav{z-index: 99;}
+
+
+.bbox{
+  background: #f7e5b8;
+  border-radius: 30px;
+  padding: 20px;
+  width: 200px;
+  height: auto;
+}

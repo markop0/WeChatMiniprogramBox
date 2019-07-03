@@ -1,0 +1,62 @@
+<!--pages/calendar/calendar.wxml-->
+<view class="calendar" bindtap="tap">
+  <view class="calendar-panel">
+    <view class="month" style='color:#318efd;'>{{canlender.month}}月</view>
+  </view>
+  <view class="calendar-header">
+    <view>一</view>
+    <view>二</view>
+    <view>三</view>
+    <view>四</view>
+    <view>五</view>
+    <view>六</view>
+    <view>日</view>
+  </view>
+  <view class="calendar-body">
+    <block wx:for="{{canlender.weeks}}" wx:for-item="weeks">
+      <view class="calender-body-date-week">
+        <block wx:for="{{weeks}}" wx:for-item="day">
+          <view bindtap='toTomorrow' bindtouchstart='bindtouchstart' bindtouchend='bindtouchend' bindlongtap='bindTap1' data-Day='{{day.date}}' data-month='{{day.month}}' class="date {{canlender.month == day.month? '' : 'placeholder'}} {{day.date==canlender.date&&day.month==canlender.month  ?'date-current': ''}}">
+            <view class="{{day.date==canlender.date&&day.month==canlender.month  ?'thatDay': ''}}">{{day.date}}</view>
+            <view wx:if='{{day.month==item.SHS_3 && day.date==item.numb && canlender.month == day.month}}' wx:for='{{dateEvent}}' wx:key='{{index}}' class="dateevent {{item.Keep_Emergency == 1? 'cc1' : item.Keep_Emergency == 2? 'cc2':item.Keep_Emergency == 3? 'cc3':item.Keep_Emergency == 4? 'cc4':'ccx'}} {{canlender.month == day.month? '' : 'placeholder'}}">{{item.Keep}}</view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+  <view class="calendar-panel1">
+    <view class="month">
+      <text wx:if='{{canlender2.month==1}}'>{{canlender2.year}}年 </text> {{canlender2.month}}月
+    </view>
+  </view>
+  <view class="calendar-body">
+    <block wx:for="{{canlender2.weeks}}" wx:for-item="weeks">
+      <view class="calender-body-date-week">
+        <block wx:for="{{weeks}}" wx:for-item="day">
+          <view bindtap='toTomorrow' bindtouchstart='bindtouchstart' bindtouchend='bindtouchend' bindlongtap='bindTap2' data-Day='{{day.date}}' data-month='{{day.month}}' class="date {{day.date==dayvalue1?'date-current': ''}} {{canlender2.month == day.month? '' : 'placeholder'}}">{{day.date}}
+            <view wx:if='{{day.month==item.SHS_3 && day.date==item.numb && canlender2.month == day.month}}' wx:for='{{dateEvent}}' wx:key='{{index}}' class="dateevent {{item.Keep_Emergency == 1? 'cc1' : item.Keep_Emergency == 2? 'cc2':item.Keep_Emergency == 3? 'cc3':item.Keep_Emergency == 4? 'cc4':''}}  {{canlender2.month == day.month? '' : 'placeholder'}}">{{item.Keep}}</view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='mask leadM' wx:if='{{leadMask}}' >
+  <view class='leadTips dw2' wx:if='{{isShowTips}}'>
+    点击这里
+    <!-- <i class='fa fa-remove ' bindtap='closeTips'></i>  ,添加到我的小程序更容易找到哦-->
+    <view class='sj1'></view>
+  </view>
+  <view class='cellBox'>
+    <view class='tipsCell'>
+      <view class='ball flex'>1</view>
+      <view class='Ttext'>点击右上角</view>
+      <image class='jnj' src='../image/jnz.png'></image>
+    </view>
+    <view class='tipsCell'>
+      <view class='ball flex'>2</view>
+      <view class='Ttext'>点击“添加到我的小程序”</view>
+    </view>
+  </view>
+  <view class='okl' catchtap='closeLead'>记住了，我去试试</view>
+</view>

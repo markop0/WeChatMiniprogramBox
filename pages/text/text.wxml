@@ -1,9 +1,21 @@
 <!-- new Number: {{newNumber}} -->
-<view class='number'>{{number}}</view>
-<button bindtap="start">start</button>
+<!-- <view class='number'>{{number}}</view>
+<button bindtap="start">start</button> -->
 
 
 <!-- <view class='red'>
   <view class='text'></view>
 </view> -->
-<button bindtap='tap' data-key='abc'>tap</button>
+<!-- <button bindtap='tap' data-key='abc'>tap</button>
+<component-tag-name inner-text="Some text"></component-tag-name> -->
+<!-- <view class='Mbox'>
+  <view class='title'>id</view>
+  <textarea class='area' placeholder='请输入'></textarea>
+</view> -->
+<view class='container'>
+  <view class='cell'>111</view>
+  <view class='cell'>222</view>
+  <view class='cell'>333</view>
+  <view class='cell'>444</view>
+  <view class='cell'>555</view>
+</view>

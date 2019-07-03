@@ -17,6 +17,11 @@ Page({
   onLoad: function(options) {
 
   },
+  onPullDownRefresh() {
+    this.FnumHeight=0
+    wx.stopPullDownRefresh()//得到结果后关掉刷新动画
+
+  },
   handletouchmove: function(event) {
     var setId = event.currentTarget.dataset.setId
     // console.log(event)
@@ -72,7 +77,7 @@ Page({
     this.data.flag = 0
     this.setData({
       // text: "没有滑动",
-      FnumHeight: afterHeight,
+      FnumHeight: parseInt(afterHeight),
       startY: event.changedTouches[0].pageY
     });
   },

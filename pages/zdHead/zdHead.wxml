@@ -1,0 +1,2 @@
+<!--pages/zdHead/zdHead.wxml-->
+<text>自定义{{text}}</text>

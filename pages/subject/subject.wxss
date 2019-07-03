@@ -1,0 +1,30 @@
+/* pages/subject/subject.wxss */
+
+.cellSubject {
+  width: calc(100% - 28px);
+  height: 52px;
+  font-size: 18px;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+.leadBox{
+  display: flex;
+  align-items: center;
+}
+.subjectColor {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  margin-right: 14px;
+}
+
+.subjectBtn {
+  width: 60px;
+  border:1px solid #cccccc;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+}

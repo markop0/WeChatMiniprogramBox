@@ -8,7 +8,7 @@ Page({
     xxx: 0,
     backIcon: "/../img/back.png",
     homeIcon: "/../img/home.png",
-    background: 'rgba(255, 255, 255, 1)',
+    background: '#90c7ff',
     color: 'rgba(0, 0, 0, 1)',
     titleText:'导航栏',
     titleImg: '',

@@ -33,6 +33,21 @@ App({
       }
     })
   },
+  setSubject: function (e) {
+    // 设置主题颜色
+    let fc = '#ffffff'
+    const subject = wx.getStorageSync('subject')
+    subject !== '#ffffff' ? '' : 'fc="black"'
+    wx.setNavigationBarColor({
+      frontColor: fc,
+      backgroundColor: subject,
+      animation: {
+        duration: 400,
+        timingFunc: 'easeIn'
+      }
+    })
+    console.log('change-OK')
+  },
   globalData: {
     userInfo: null
   }

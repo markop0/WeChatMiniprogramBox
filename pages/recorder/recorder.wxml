@@ -1,0 +1,17 @@
+<!--pages/recorder/recorder.wxml-->
+<view class='recorder' bindtouchstart='startRec' bindtouchend='stopRec'>长按录音</view>
+
+
+<view class='audioBox' wx:if='{{isShowAudio}}'>
+  <view class="playBtn" bindtap='play' wx:if='{{!isplay}}'>
+    <image src="/img/play.png" style="width:36px;height:36px;" role="img"></image>
+  </view>
+  <view class="playBtn" bindtap='stop' wx:if='{{isplay}}'>
+    <image src="/img/stop.png" style="width:36px;height:36px;" role="img"></image>
+  </view>
+  <slider block-size="12" value="{{timeVal}}" max="{{maxVal}}" activeColor="#FF1744" block-color="#f97468" bindchange="slideBar" bindchanging="slideBar"></slider>
+  <view class="size">{{currentTime}}</view>
+  <view class="timeshow">{{duration}}</view>
+</view>
+
+<!-- <audio poster="{{audio/img}}" name="{{audioName}}" author="{{author}}" src="{{src}}" id="myAudio" controls ></audio> -->

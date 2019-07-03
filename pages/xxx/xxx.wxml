@@ -1,6 +1,8 @@
 <!--pages/xxx/xxx.wxml-->
 <!-- <text>pages/xxx/xxx.wxml</text> -->
 <!-- <button bindtap='tap' data-key='abc'>tap</button> -->
+
+<!-- <image class='bbg' src='/img/bbg.png'></image> -->
 <view class='nav' style='height: {{status + navHeight}}px'>
   <view class='status' style='height: {{status}}px;{{containerStyle}}'></view>
   <view class='navbar' style='height:{{navHeight}}px;{{containerStyle}}'>
@@ -20,3 +22,7 @@
     </view>
   </view>
 </view>
+
+<!-- <view class='bbox'>
+文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+</view> -->

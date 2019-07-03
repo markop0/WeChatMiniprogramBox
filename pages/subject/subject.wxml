@@ -1,0 +1,8 @@
+<!--pages/subject/subject.wxml-->
+<view>
+  <view class='cellSubject' bindtap='setSubject' wx:for='{{subjectA}}' wx:key='{{index}}' data-color='{{item.color}}'>
+    <view class='leadBox' style='color:{{item.color}}'>
+      <view class='subjectColor' style='background:{{item.color}}'></view>{{item.name}}</view>
+    <view class='subjectBtn' style='{{nowColor==item.color?"color:"+item.color+";border-color:"+item.color:""}}'>{{nowColor==item.color?'使用中':'使用'}}</view>
+  </view>
+</view>

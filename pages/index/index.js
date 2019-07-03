@@ -9,16 +9,20 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     arr: [
-          // { id: 'animation', name: 'animation'},
-          // { id: 'guodong', name: '果冻菜单' }, 
-          // { id: 'login', name: '登入' }, 
-          // { id: 'Me', name: '我的' }, 
-          // { id: 'infoFlow', name: '信息流' }, 
-          // { id: 'leftMenu', name: '侧边抽屉菜单' }
+      // { id: 'animation', name: 'animation'},
+      // { id: 'guodong', name: '果冻菜单' }, 
+      // { id: 'login', name: '登入' }, 
+      // { id: 'Me', name: '我的' }, 
+      // { id: 'infoFlow', name: '信息流' }, 
+      // { id: 'leftMenu', name: '侧边抽屉菜单' }
       { id: 'cardSwitch', name: 'cardSwitch' },
-      { id: 'xxx', name: 'xxx' },
+      { id: 'xxx', name: '自定义导航栏' },
       { id: 'lucky', name: 'lucky' },
-      { id: 'suiji', name: 'suiji' }
+      { id: 'suiji', name: 'suiji' },
+      { id: 'subject', name: '主题' },
+      { id: 'calendar', name: '日历' },
+      { id: 'recorder', name: '录音' },
+      { id: 'sort', name: '拖拽' },
     ]
   },
   //事件处理函数
@@ -28,6 +32,7 @@ Page({
     })
   },
   onLoad: function () {
+    app.setSubject();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

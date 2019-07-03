@@ -4,7 +4,7 @@ page {
   margin: 60px 0;
   
 }
-
+.foot{width: 100vw;height: 60px;}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -27,12 +27,15 @@ page {
 }
 
 .Mbox {
-  background-image: url(http://u6.gg/gPe9D);
+  /* background-image: url(http://u6.gg/gPe9D); */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .Mbox button {
-  width: 44.5%;
+  width: 30%;
   height: 40px;
   float: left;
-  margin: 10px;
+  margin: 6px 4px;
 }
