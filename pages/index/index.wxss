@@ -34,8 +34,11 @@ page {
 }
 
 .Mbox button {
-  width: 30%;
+  width: 28.8%;
   height: 40px;
   float: left;
   margin: 6px 4px;
+  padding: 0;
+  font-size: 14px;
+  line-height:40px;
 }

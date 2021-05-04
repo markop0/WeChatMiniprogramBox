@@ -41,10 +41,10 @@
     </block>
   </view>
 </view>
-<view class='mask leadM' wx:if='{{leadMask}}' >
+<!-- <view class='mask leadM' wx:if='{{leadMask}}' >
   <view class='leadTips dw2' wx:if='{{isShowTips}}'>
     点击这里
-    <!-- <i class='fa fa-remove ' bindtap='closeTips'></i>  ,添加到我的小程序更容易找到哦-->
+    <i class='fa fa-remove ' bindtap='closeTips'></i>  ,添加到我的小程序更容易找到哦
     <view class='sj1'></view>
   </view>
   <view class='cellBox'>
@@ -59,4 +59,4 @@
     </view>
   </view>
   <view class='okl' catchtap='closeLead'>记住了，我去试试</view>
-</view>
+</view> -->

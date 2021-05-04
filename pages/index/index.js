@@ -17,7 +17,7 @@ Page({
       // { id: 'leftMenu', name: '侧边抽屉菜单' }
       { id: 'cardSwitch', name: 'cardSwitch' },
       { id: 'xxx', name: '自定义导航栏' },
-      { id: 'lucky', name: 'lucky' },
+      { id: 'lucky', name: '九宫格抽奖' },
       { id: 'suiji', name: 'suiji' },
       { id: 'subject', name: '主题' },
       { id: 'calendar', name: '日历' },

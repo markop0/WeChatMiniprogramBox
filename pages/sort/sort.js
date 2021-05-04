@@ -2,7 +2,7 @@ var app = getApp();
 var x, y, x1, y1, x2, y2;
 Page({
   data: {
-    all_list: [{ id: 1, text: '推荐' }, { id: 2, text: 'logo设计' }, { id: 3, text: 'ui设计' }, { id: 4, text: 'css设计' }, { id: 5, text: 'js设计' }, { id: 6, text: '装修设计' }, { id: 7, text: '圣诞树' }, { id: 8, text: '家装修' }],//已经增加的列表
+    all_list: [{ id: 1, text: '推荐' }, { id: 2, text: 'logo设计' }, { id: 3, text: 'ui设计' }, { id: 4, text: 'css设计' }, { id: 5, text: 'js设计' }, { id: 6, text: '装修设计' }, { id: 7, text: '圣诞树' }, { id: 8, text: '挖掘机' }],//已经增加的列表
     otherList: [{id:1,text:'推荐'},{id:2,text:'logo设计'}],//其他分类
     current:-1,
     s_v:10,
