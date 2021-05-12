@@ -444,7 +444,7 @@ page {
 
 .swiper {
   width: 100%;
-  height: 80%;
+  height: 80vh;
 }
 
 .swiper_con {

@@ -1,18 +1,13 @@
 <!--pages/huakuai/huakuai.wxml-->
+
 <view class='Mbox' data-setid='0' bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend" >
+  
   <view class='number'>{{FnumHeight}}</view>
   <view class="Fnum {{FnumHeight>192?'is200':''}}"style="height:{{FnumHeight}}px;"></view>
 </view>
-<view class='Mbox' data-setid='1' bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend" >
-  <view class='number'>{{FnumHeight}}</view>
-  <view class="Fnum {{FnumHeight>192?'is200':''}}"style="height:{{FnumHeight}}px;"></view>
+
+<view class='Lbox' data-setid='3' bindtouchmove="handletouchmove_x" bindtouchstart="handletouchstart_x" bindtouchend="handletouchend_x" >
+  <view class='number'>{{FnumWidth}}</view>
+  <view class="LFnum {{FnumWidth>192?'is200':''}}"style="width:{{FnumWidth}}px;"></view>
 </view>
-<view class='Mbox' data-setid='2' bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend" >
-  <view class='number'>{{FnumHeight}}</view>
-  <view class="Fnum {{FnumHeight>192?'is200':''}}"style="height:{{FnumHeight}}px;"></view>
-</view>
-{{text}}
-<view class='Lbox' data-setid='3' bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend" >
-  <view class='number'>{{FnumHeight}}</view>
-  <view class="LFnum {{FnumHeight>192?'is200':''}}"style="width:{{FnumHeight}}px;"></view>
-</view>
+<view>{{text}}</view>

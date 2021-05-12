@@ -64,14 +64,14 @@ page {
   font-size: 150%;
   width: 100%;
   display: flex;
-  height: 17vh;
+  height: 14.28vw;
 }
 
 .date {
   width: 14.28%;
   float: left;
   color: #888896;
-  height: 17vh;
+  height: 100%;
   overflow: hidden;
   /* border-bottom: 1px #d3d3d3 solid;
   border-right: 1px #d3d3d3 solid; */
@@ -98,7 +98,7 @@ page {
 
 }
 .placeholder {
-  background: #f3f3f3 !important;
+  background: #cacaca !important;
   border-right:1px #f3f3f3 solid;
 
   /* border: none !important; */

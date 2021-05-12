@@ -1,10 +1,13 @@
 /**index.wxss**/
 
 page {
-  margin: 60px 0;
   
 }
-.foot{width: 100vw;height: 60px;}
+.title{
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -31,6 +34,8 @@ page {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100vw;
+
 }
 
 .Mbox button {

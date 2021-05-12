@@ -1,20 +1,8 @@
 <!--index.wxml-->
 <view class='Mbox'>
-  <button bindtap='ccc' id='animation'>animation</button>
-  <button bindtap='ccc' id='guodong'>果冻菜单</button>
-  <button bindtap='ccc' id='login'>登入</button>
-  <button bindtap='ccc' id='Me'>个人中心</button>
-  <button bindtap='ccc' id='infoFlow'>信息流</button>
-  <button bindtap='ccc' id='leftMenu'>侧边抽屉菜单</button>
-  <button bindtap='ccc' id='article'>商品页</button>
-  <button bindtap='ccc' id='playbox'>播放器</button>
-  <button bindtap='ccc' id='banner'>banner</button>
-  <button bindtap='ccc' id='faweibo'>发布动态</button>
-  <button bindtap='ccc' id='xifu'>贴顶吸附</button>
-  <button bindtap='ccc' id='zidan'>子弹条</button>
-  <button bindtap='ccc' id='huakuai'>滑块开关</button>
-  <button bindtap='ccc' id='text'>测试</button>
   <button bindtap='ccc' id='{{item.id}}' wx:for='{{arr}}' wx:key='{{index}}'>{{item.name}}</button>
+  <view class="title">测试中...</view>
+  <button bindtap='ccc' id='{{item.id}}' wx:for='{{testMode}}' wx:key='{{index}}'>{{item.name}}</button>
 </view>
 <!-- <view class="container">
 <view class="userinfo">
@@ -30,5 +18,3 @@
 </view>-->
 
 
-
-<view class='foot'></view>
