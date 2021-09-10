@@ -33,6 +33,7 @@ Page({
     ],
     testMode:[
       { id: 'text', name: '测试' },
+      { id: 'livePlayer', name: '直播' },
     ]
   },
   //事件处理函数
