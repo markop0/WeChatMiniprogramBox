@@ -32,7 +32,7 @@ page{
   top: -26px;
 }
 .Lbox{
-width:280px;
+width:200px;
 height:70px;
 background:#f3f3f3;
 border-radius:8px;

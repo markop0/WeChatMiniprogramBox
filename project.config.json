@@ -41,7 +41,7 @@
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.7.1",
+  "libVersion": "2.18.1",
   "appid": "wx787d41b99fd2468b",
   "projectname": "UPXP%E6%A8%A1%E5%9D%97",
   "simulatorType": "wechat",

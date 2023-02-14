@@ -22,7 +22,8 @@
     "pages/subject/subject",
     "pages/calendar/calendar",
     "pages/recorder/recorder",
-    "pages/sort/sort"
+    "pages/sort/sort",
+    "pages/livePlayer/livePlayer"
   ],
   "window": {
     "backgroundTextStyle": "light",
