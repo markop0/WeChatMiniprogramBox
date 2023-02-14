@@ -1,5 +1,5 @@
 <!--pages/recorder/recorder.wxml-->
-<view class='recorder' bindtouchstart='startRec' bindtouchend='stopRec'>长按录音</view>
+
 
 
 <view class='audioBox' wx:if='{{isShowAudio}}'>
@@ -13,5 +13,5 @@
   <view class="size">{{currentTime}}</view>
   <view class="timeshow">{{duration}}</view>
 </view>
-
+<view class='recorder' bindtouchstart='startRec' bindtouchend='stopRec'>长按录音</view>
 <!-- <audio poster="{{audio/img}}" name="{{audioName}}" author="{{author}}" src="{{src}}" id="myAudio" controls ></audio> -->

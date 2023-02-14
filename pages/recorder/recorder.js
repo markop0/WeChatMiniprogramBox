@@ -14,16 +14,17 @@ Page({
     currentTime: '00:00',
     duration: '',
     isShowAudio: false,
+    voice:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
   },
   // 开始录音
-  startRec: function() {
+  startRec: function () {
     const options = {
       duration: 10000, //指定录音的时长，单位 ms
       sampleRate: 16000, //采样率
@@ -35,7 +36,7 @@ Page({
     wx.showToast({
       title: '正在录音',
       image: '/img/micr.png',
-      duration:60000
+      duration: 60000
     })
 
     //开始录音
@@ -49,9 +50,9 @@ Page({
     })
   },
   // 停止录音
-  stopRec: function() {
+  stopRec: function () {
     wx.hideToast({
-      
+
     })
     recorderManager.stop();
     recorderManager.onStop((res) => {
@@ -59,9 +60,19 @@ Page({
       console.log('停止录音', res.tempFilePath)
       const {
         tempFilePath
-      } = res
+      } = res;
+      let that =this;
+      wx.saveFile({ // 下载到本地
+        tempFilePath: res.tempFilePath,
+        success(res2) {
+          that.setData({
+            voice: res2.savedFilePath
+          })
+        }
+      })
     })
     innerAudioContext.src = this.tempFilePath,
+      console.log(this.tempFilePath);
     this.setData({
       isShowAudio: true,
       src: this.tempFilePath,
@@ -70,8 +81,33 @@ Page({
       maxVal: Math.ceil(innerAudioContext.duration)
     })
   },
+  useWebSocket:function(){
+    let SocketTask = wx.connectSocket({
+      url: 'wss://app-test.kidsplace.cn:18887',
+      success: function (res) {
+        console.log(res)
+        
+      },
+      fail: function (err) {
+      }
+    })
+    var that = this;
+    SocketTask.onOpen((res) => {
+      console.log(res)
+      SocketTask.send({
+        //向服务器发送消息
+        data: that.tempFilePath,
+        success: function (res) {
+          console.log(res, '发送成功了')
+        },
+        fail: function (err) {
+          console.log(err, '发送失败了')
+        }
+      })
+    })
+  },
   // 播放录音
-  play: function() {
+  play: function () {
     this.setData({
       isplay: !this.data.isplay,
     })
@@ -91,7 +127,7 @@ Page({
     this.endTime(that)
   },
   // 暂停播放录音
-  stop: function() {
+  stop: function () {
     this.setData({
       isplay: !this.data.isplay,
     })
@@ -101,7 +137,7 @@ Page({
 
   },
   // 播放进度开始事件
-  onTime: function(that) {
+  onTime: function (that) {
     innerAudioContext.onPlay(() => {
       this.setData({
         currentTime: this.secondToMin(innerAudioContext.currentTime)
@@ -109,7 +145,7 @@ Page({
     })
   },
   // 播放进度跳转事件
-  seekTime: function(that) {
+  seekTime: function (that) {
     innerAudioContext.onSeeked((res) => {
       this.updateTime(that) //触发updataTime事件，
       this.setData({
@@ -118,7 +154,7 @@ Page({
     })
   },
   // 播放进度更新事件
-  updateTime: function(that) {
+  updateTime: function (that) {
     innerAudioContext.onTimeUpdate(() => {
       const currentTime = innerAudioContext.currentTime
       this.setData({
@@ -130,7 +166,7 @@ Page({
     })
   },
   // 播放结束事件
-  endTime: function(that) {
+  endTime: function (that) {
     innerAudioContext.onEnded(() => {
       this.setData({
         isplay: !this.data.isplay,
@@ -140,7 +176,7 @@ Page({
     })
   },
   // 进度条点击 跳转 && 滑动跳转
-  slideBar: function(aa) {
+  slideBar: function (aa) {
     innerAudioContext.src = this.data.src
     var that = this;
     var curval = aa.detail.value; //滑块拖动的当前值
@@ -148,7 +184,7 @@ Page({
     this.seekTime(that)
   },
   //时间换算
-  secondToMin: function(s) {
+  secondToMin: function (s) {
     var MM = Math.floor(s / 60);
     var SS = s % 60;
     if (MM < 10)
@@ -161,49 +197,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

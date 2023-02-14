@@ -28,8 +28,8 @@ Page({
       { id: 'suiji', name: '谁来喝' },
       { id: 'subject', name: '主题' },
       { id: 'calendar', name: '日历' },
-      { id: 'recorder', name: '录音' },
       { id: 'sort', name: '拖拽' },
+      { id: 'recorder', name: '录音' },
     ],
     testMode:[
       { id: 'text', name: '测试' },

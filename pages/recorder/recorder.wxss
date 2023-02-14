@@ -3,14 +3,17 @@
   display: flex;
   width: 100vw;
   justify-content: center;
-  
+  margin: 30px 0;
 }
 .recorder {
-  width: 80vw;
-  height: 40px;
-  border-radius: 8px;
-  background: #f0f0f0;
-  text-align: center;
-  line-height: 40px;
+  width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: #7dd7ff;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 50px);
 }
 slider{width: 56%;}
