@@ -3,6 +3,10 @@
 
 
 <view class='audioBox' wx:if='{{isShowAudio}}'>
+  <view>
+  <input class="weui-input" auto-focus placeholder="设备id"/>
+  <button class="mini-btn" type="default" size="mini" bindtap="getWebVoiceTalkUrl">提交</button>
+  </view>
   <view class="playBtn" bindtap='play' wx:if='{{!isplay}}'>
     <image src="/img/play.png" style="width:36px;height:36px;" role="img"></image>
   </view>
